@@ -1,0 +1,9 @@
+:- dynamic normSubClassOf/2.
+
+normSubClassOf('t:#ThinAndCrispyPizza', 't:#ThinAndCrispyPizza').
+normSubClassOf(intersectionOf('t:#Pizza', 'complementOf(someValuesFrom(t:#hasBase,complementOf(t:#ThinAndCrispyBase)))'), 'intersectionOf(t:#Pizza,complementOf(someValuesFrom(t:#hasBase,complementOf(t:#ThinAndCrispyBase))))').
+normSubClassOf('t:#Pizza', 't:#Pizza').
+normSubClassOf('someValuesFrom(t:#hasBase,complementOf(t:#ThinAndCrispyBase))', someValuesFrom('t:#hasBase', 'complementOf(t:#ThinAndCrispyBase)')).
+normSubClassOf('t:#ThinAndCrispyBase', 't:#ThinAndCrispyBase').
+normSubClassOf('intersectionOf(t:#Pizza,complementOf(someValuesFrom(t:#hasBase,complementOf(t:#ThinAndCrispyBase))))', 't:#ThinAndCrispyPizza').
+

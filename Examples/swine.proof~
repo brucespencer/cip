@@ -1,0 +1,47 @@
+
+/*  1 */ sSubClassOf('allValuesFrom(hasSugar,RieslingSugar)',allValuesFrom(hasSugar,'RieslingSugar')).
+/*  2 */ sSubClassOf(someValuesFrom(hasSugar,'DrySugar'),'someValuesFrom(hasSugar,DrySugar)').
+/*  3 */ sSubClassOf('someValuesFrom(hasSugar,DrySugar)',someValuesFrom(hasSugar,'DrySugar')).
+/*  4 */ sSubClassOf('someValuesFrom(hasSugar,Sugar)',
+/*  5 */ sSubClassOf('DrySugar','Sugar').
+/*  6 */ sSubClassOf('DryWine','Wine').
+/*  7 */ sSubClassOf('Riesling','Wine').
+/*  8 */ sSubClassOf('Riesling','allValuesFrom(hasSugar,RieslingSugar)').
+/*  9 */ sSubClassOf('RieslingSugar','DrySugar').
+/* 10 */ sSubClassOf('Wine','someValuesFrom(hasSugar,Sugar)').
+/* 11 */ sSubClassOf('DryWine','someValuesFrom(hasSugar,DrySugar)').
+/* 12 */ sSubClassOf('someValuesFrom(hasSugar,DrySugar)','DryWine').
+
+/*
+  Proof without normalzation
+  Riesling -> Wine -> someValueFrom(hasSugar, Sugar)
+  Riesling -> allValuesFrom(hasSugar,RieslingSugar)
+  Riesling -> someValuesFrom(hasSugar,RieslingSugar)
+  Riesling -> someValuesFrom(hasSugar,DrySugar)
+
+  Proof with normalzation
+/* 13a */  init        init('Reisling')
+/* 13b */  R_A         'Rielsing' sub 'Rielsing' using 13a
+/* 14 */  R^n_sqcap   'Riesling' sub 'Wine' using 13b, 7
+/* 15 */  R^n_sqcap   'Riesling' sub 'someValuesFrom(hasSugar,Sugar)' using 14, 10
+/* 16 */  R^n_sqcap   'Riesling' sub someValuesFrom(hasSugar,'Sugar') using 15, 3
+/* 17 */  R^n_sqcap   'Riesling' sub 'allValuesFrom(hasSugar,RieslingSugar)' using 8, 13b
+/* 18 */  R_forall    'Reisling' sub someValuesFrom(hasSugar, intersectionOf('Sugar', 'RieslingSugar'))
+		                         using 16 for H sub someR.K, 17 for H sub A, 1 for side
+		    R = hasSugar
+		    K = 'Sugar'
+		    B = 'ReislingSugar'
+		    S = hasSugar
+		    H = 'Reisling'
+/* 19 */  init       init(intersectionOf('Sugar', 'RieslingSugar'))
+/* 20 */ R_A	     intersectionOf('Sugar', 'RieslingSugar') sub 'Sugar' using  19
+/* 21 */ R_A	     intersectionOf('Sugar', 'RieslingSugar') sub 'RieslingSugar' using 19  
+/* 22 */ R^n_sqcap   intersectionOf('Sugar', 'RieslingSugar') sub 'DrySugar' using 21, 9
+/* 23 */ R^-_exists   'Reisling' sub 'someValuesFrom(hasSugar,DrySugar)' using 18, 22 2
+		    R = hasSugar
+		    K = intersectionOf('Sugar', 'RieslingSugar'))
+		    A = 'DrySugar'
+		    B = 'someValuesFrom(hasSugar,DrySugar)'
+		    S = hasSugar	    
+/* 24 */ R^n_sqcap 'Reisling' sub 'DryWine' using 19, 12
+		    

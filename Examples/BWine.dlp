@@ -1,0 +1,52 @@
+% annotationProperty('http://www.w3.org/2000/01/rdf-schema#comment') 
+% annotationProperty('http://www.w3.org/2000/01/rdf-schema#label') 
+% class('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Color') 
+% class('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#DrySugar') 
+% class('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#DryWine') 
+% class('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Grape') 
+% class('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Riesling') 
+% class('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#RieslingGrape') 
+% class('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#RieslingSugar') 
+% class('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Sugar') 
+% class('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#White') 
+% class('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#WhiteWine') 
+% class('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Wine') 
+% equivalentClasses(['http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#DryWine',someValuesFrom('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#hasSugar','http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#DrySugar')]) 
+'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#DryWine'(X):-
+     'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#DrySugar'(VEx_1),'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#hasSugar'(X,VEx_1).
+% equivalentClasses(['http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Riesling',allValuesFrom('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#hasSugar','http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#RieslingSugar')]) 
+'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#RieslingSugar'(Y):-
+     'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#hasSugar'(X,Y),'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Riesling'(X).
+% equivalentClasses(['http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Riesling',someValuesFrom('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#hasColor','http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#White')]) 
+'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Riesling'(X):-
+     'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#White'(VEx_2),'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#hasColor'(X,VEx_2).
+% equivalentClasses(['http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#WhiteWine',someValuesFrom('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#hasColor','http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#White')]) 
+'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#WhiteWine'(X):-
+     'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#White'(VEx_3),'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#hasColor'(X,VEx_3).
+% equivalentClasses(['http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Wine',someValuesFrom('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#hasSugar','http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Sugar')]) 
+'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Wine'(X):-
+     'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Sugar'(VEx_4),'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#hasSugar'(X,VEx_4).
+% objectProperty('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#hasColor') 
+% objectProperty('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#hasSugar') 
+% ontology('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl') 
+% subClassOf('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#DrySugar','http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Sugar') 
+'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Sugar'(X):-
+     'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#DrySugar'(X).
+% subClassOf('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#DryWine','http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Wine') 
+'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Wine'(X):-
+     'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#DryWine'(X).
+% subClassOf('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Riesling','http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Wine') 
+'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Wine'(X):-
+     'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Riesling'(X).
+% subClassOf('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#RieslingGrape','http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Grape') 
+'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Grape'(X):-
+     'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#RieslingGrape'(X).
+% subClassOf('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#RieslingSugar','http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#DrySugar') 
+'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#DrySugar'(X):-
+     'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#RieslingSugar'(X).
+% subClassOf('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#White','http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Color') 
+'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Color'(X):-
+     'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#White'(X).
+% subClassOf('http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#WhiteWine','http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Wine') 
+'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#Wine'(X):-
+     'http://www.semanticweb.org/ontologies/2012/3/Ontology1335829483816.owl#WhiteWine'(X).
