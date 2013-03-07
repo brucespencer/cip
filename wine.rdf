@@ -17,7 +17,7 @@
   xmlns:xsd = "http://www.w3.org/2001/XMLSchema#">
 
   <owl:Ontology rdf:about="">
-    <rdfs:comment>An example OWL ontology</rdfs:comment>
+    <rdfs:comment>An example OWL ontology (not by bruce)</rdfs:comment>
     <owl:priorVersion>
       <owl:Ontology rdf:about="http://www.w3.org/TR/2003/CR-owl-guide-20030818/wine"/>
     </owl:priorVersion>
