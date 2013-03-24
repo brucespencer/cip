@@ -1,2 +1,0 @@
-Line 1 same
-Line 2 different 2
