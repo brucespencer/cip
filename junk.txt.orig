@@ -1,0 +1,6 @@
+line 1 same
+<<<<<<< HEAD
+line 2 different 2
+=======
+line 2 different 1
+>>>>>>> d35b4b7b5bc64a21978dafabf35145ca345d6b77
